@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=hackathon_88ninelabs
+POSTGRES_USER=YUVZOUFAPTxdKcmqDEQbYvZmtWIphFfV
+POSTGRES_PASSWORD=chPqLYYBzYQKU6M6gOkj4FPJdrUGfRse2mDdo1jUsQZ8OBvSYD6drH4exTlorzBF

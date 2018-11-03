@@ -1,0 +1,5 @@
+[run]
+include = hackathon_88ninelabs/*
+omit = *migrations*, *tests*
+plugins =
+    django_coverage_plugin
