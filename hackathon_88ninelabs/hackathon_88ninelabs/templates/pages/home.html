@@ -1,1 +1,13 @@
 {% extends "base.html" %}
+{% block content %}
+
+<H1>Welcome Citizen!</H1>
+
+<p>Use our form to submit a complaint to the Milwaukee Fire & Police Commission. We help you create an effective description to provide to the city while allowing us to share public data to help with visibility of it's lifecycle.
+</p>
+
+<center><a href="{% url 'Incident:incident_create' %}" class="btn btn-danger"> Report Abuse</a></center>
+
+
+
+{% endblock %}
