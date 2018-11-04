@@ -25,6 +25,7 @@ class IncidentForm(ModelForm):
     incident_was_detained=forms.NullBooleanField(required=False, label="Were you detained?")
     indicent_was_concent=forms.NullBooleanField(required=False, label="Did you give consent?")
     indicent_details=forms.TextInput()
+
     class Meta:
         model = Incident
         fields = '__all__'

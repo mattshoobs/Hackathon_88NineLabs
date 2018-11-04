@@ -24,4 +24,5 @@ class Incident(models.Model):
     indicent_details=models.TextField()
 
     def save(self, *args, **kwargs):
-        pass
+        print(f'TEST STUFF ***** {self.incident_address_city}')
+        # Put all business logic for sending the fields and calling the old form here.
