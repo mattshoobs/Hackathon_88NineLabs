@@ -4,8 +4,9 @@
 {% block content %}
 
   {% if request.user.is_authenticated %}
-
-    <h1>{{ request.user.name }}</h1>
+  <br>
+    <p>You are logged in as: {{ request.user.name }}
+    </p>
 
   {% endif %}
     {% crispy form %}
