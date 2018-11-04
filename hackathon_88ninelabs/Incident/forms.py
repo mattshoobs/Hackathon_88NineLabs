@@ -44,6 +44,8 @@ class IncidentForm(ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(IncidentForm, self).__init__(*args, **kwargs)
+        self.fields.keyOrder = [
+            ]
         self.helper = FormHelper(self)
 
         self.helper.add_input(Submit('submit', 'File Complaint'))
