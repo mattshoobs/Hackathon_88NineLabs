@@ -4,7 +4,7 @@ from .models import Incident
 from .forms import IncidentForm
 
 class IncidentCreate(CreateView):
-    template_name = 'incident_report.html'
+    template_name = 'forms/crispy_incident_report_form.html'
     model = Incident
     form_class = IncidentForm
 
