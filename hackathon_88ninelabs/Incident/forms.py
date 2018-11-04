@@ -16,14 +16,14 @@ class IncidentForm(ModelForm):
                            ('intimidation','Intimidation'),
                            ('false_evidence','False/Tampering with Evidence'))
 
-    DEPARTMENT_CHOICES = (('fire', 'Fire Department',), ('police', 'Police Department',))
+    DEPARTMENT_CHOICES = (('Fire', 'Fire Department',), ('Police', 'Police Department',))
 
     incident_address_street=forms.CharField(max_length=160, label="Street Address")
     incident_address_city=forms.CharField(max_length=20, label="City", initial="Milwaukee")
     incident_address_state=forms.CharField(max_length=20, label="State", initial="Wisconsin")
     incident_address_zip=forms.CharField(max_length=10, label="Zip Code")
     incident_time=forms.TimeField(label="Time of Incident", help_text="HH:MM")
-    incident_date=forms.DateField(label="Date of Incident", help_text="MM/DD/YYYY", widget=forms.DateInput)
+    incident_date=forms.DateField(label="Date of Incident", help_text="MM/DD/YYYY")
     incident_type=forms.MultipleChoiceField(label="Incident Type", widget=forms.CheckboxSelectMultiple, choices=INCIDENT_TYPE_CHOICES)
     subject_name=forms.CharField(max_length=160, required=False, label="Name of Official")
     subject_badge_number=forms.CharField(max_length=80, required=False, label="Badge Number")
@@ -60,11 +60,11 @@ class IncidentForm(ModelForm):
             'indicent_was_searched',
             'indicent_was_seized',
             'incident_was_detained',
-            'indicent_was_concent']
+            'indicent_was_concent',
+            'indicent_details']
 
 
     def __init__(self, *args, **kwargs):
         super(IncidentForm, self).__init__(*args, **kwargs)
-
         self.helper = FormHelper(self)
         self.helper.add_input(Submit('submit', 'File Complaint'))
