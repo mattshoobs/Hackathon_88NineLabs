@@ -28,3 +28,9 @@ class IncidentForm(ModelForm):
     class Meta:
         model = Incident
         fields = '__all__'
+
+    def __init__(self, *args, **kwargs):
+        super(IncidentForm, self).__init__(*args, **kwargs)
+        self.helper = FormHelper(self)
+        self.helper.form_class = 'register__form'
+        self.helper.add_input(Submit('submit', 'File Complaint'))
