@@ -22,3 +22,6 @@ class Incident(models.Model):
     incident_was_detained=models.NullBooleanField()
     indicent_was_concent=models.NullBooleanField()
     indicent_details=models.TextField()
+
+    def save(self, *args, **kwargs):
+        pass
