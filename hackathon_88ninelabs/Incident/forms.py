@@ -38,14 +38,33 @@ class IncidentForm(ModelForm):
     indicent_was_concent=forms.NullBooleanField(required=False, label="Did you give consent?", widget=forms.CheckboxInput)
     indicent_details=forms.TextInput()
 
+
+
     class Meta:
         model = Incident
-        fields = '__all__'
+        fields = [
+            'incident_address_street',
+            'incident_address_city',
+            'incident_address_state',
+            'incident_address_zip',
+            'incident_time',
+            'incident_date',
+            'incident_type',
+            'subject_name',
+            'subject_badge_number',
+            'subject_car_number',
+            'subject_department',
+            'subject_physical_description',
+            'incident_was_ticketed',
+            'incident_has_warrent',
+            'indicent_was_searched',
+            'indicent_was_seized',
+            'incident_was_detained',
+            'indicent_was_concent']
+
 
     def __init__(self, *args, **kwargs):
         super(IncidentForm, self).__init__(*args, **kwargs)
-        self.fields.keyOrder = [
-            ]
-        self.helper = FormHelper(self)
 
+        self.helper = FormHelper(self)
         self.helper.add_input(Submit('submit', 'File Complaint'))
