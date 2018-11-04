@@ -2,9 +2,10 @@
 {% load crispy_forms_tags %}
 {% block title %}{{ page_title|title }}{% endblock %}
 {% block content %}
-
+<h1>Incident Information</h1>
+  <hr>
   {% if request.user.is_authenticated %}
-  <br>
+
     <p>You are logged in as: {{ request.user.name }}
     </p>
 
