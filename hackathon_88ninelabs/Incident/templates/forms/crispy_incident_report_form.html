@@ -3,7 +3,11 @@
 {% block title %}{{ page_title|title }}{% endblock %}
 {% block content %}
 
-    {% crispy form %}
+  {% if request.user.is_authenticated %}
 
+    <h1>{{ request.user.name }}</h1>
+
+  {% endif %}
+    {% crispy form %}
 
 {% endblock %}
