@@ -17,7 +17,7 @@ urlpatterns = [
     # User management
     path("users/", include("hackathon_88ninelabs.users.urls", namespace="users"),),
     path("accounts/", include("allauth.urls")),
-    path("abuse/", include("Incident.urls", namespace="abuse_incident"))
+    path("abuse/", include("Incident.urls", namespace="Incident"))
 ] + static(
     settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
 )
